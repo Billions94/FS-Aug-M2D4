@@ -16,14 +16,13 @@
 
 
 
-
-
+// Add names to waiting list
 let players = []
 
 
 function addPlayers(){
     let newList = document.querySelector(`#lname`).value
-    let teamNode = document.createElement(`li`)
+    let teamNode = document.createElement(`div`)
     teamNode.innerHTML = newList
     teamNode.classList.add('players')
     document.getElementById('list').appendChild(teamNode)
@@ -36,23 +35,27 @@ function addPlayers(){
 
 
 
-
+// Add number for teams 
 function createTeams() {
      let newTeam = document.getElementById('teamid').value
-     let newTeamNode = parseInt(newTeam)
-
+    
      for (let i = 0; i < newTeam.length; i++) {
          let team = document.createElement('div')
+         team.classList.add('col')
          team.classList.add('team')
          document.getElementById('teamrow').appendChild(team)
          document.getElementById('teamid').value = ''
-         team.innerHTML = 'Team' + i
+         team.innerHTML = 'Team' + [i]
          
      }
 
     
 }
 
+// Assign random person to a list
+function assignRandom(){
+    
+}
 
 
 

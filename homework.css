@@ -5,3 +5,29 @@
 #list {
     height: 10vh;
 }
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(8,36,50,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+label {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+h4 {
+    color: white;
+
+}
+
+.col-9 {
+    color: white;
+}
+
+#teamrow {
+    color: white;
+}
