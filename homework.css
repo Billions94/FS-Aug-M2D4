@@ -1,17 +1,7 @@
-.col-4 {
-    background-color: black;
-    color: white;
-    height: 100vh;
+#teamrow {
+       height: 20vh;
 }
 
-.col-5 {
-    background-color: blue;
-    color: white;
-    height: 100vh;
-}
-
-.col-3 {
-    background-color: gray;
-    color: white;
-    height: 100vh;
+#list {
+    height: 10vh;
 }

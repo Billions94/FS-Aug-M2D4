@@ -16,51 +16,41 @@
 
 
 
-// function changeUserName(){
-//     const user = document.querySelectorAll('li')
-
-//     for (let i = 0; i < user.length; i++) {
-//         user[i].innerText = 'Thank you Jesus'
-//     }
-// }
-// const userInput = document.getElementById('lname').value
-
-// function addNewPlayer(){
-//     const newPlayer = document.querySelectorAll('li')
-//       let name = document.createElement('div')
-//       name.innerHTML = userInput.value
-//       document.getElementsByTagName('body')[0].appendChild(name)
-//     for (let i = 0; i < newPlayer.length; i++){
-//         newPlayer[i].appendChild(name)
-        
-//     }
-// }
 
 
-
-function makeNewList(){
-      let newList = document.querySelector(`#lname`)
-      let newTeam = document.createElement(`li`)
-      newTeam.innerHTML = newList.value
-       document.getElementsByTagName(`body`)[0].appendChild(newTeam)
-
-}
-
-// function team(){
-//     let newList = document.querySelector(`#lname`)
-//     let teamNode = document.querySelectorAll(`li`)
-
-//     for (let i = 0; i < teamNode.length; i++){
-//         teamNode[i].innerHTML = newList.value
-//     }  
-// }
+let players = []
 
 
 function addPlayers(){
-    let newList = document.querySelector(`#lname`)
-    let teamNode = document.createElement(`div`)
-    document.getElementsByTagName('body')[0].appendChild(teamNode)
-    teamNode.innerHTML = newList.value
+    let newList = document.querySelector(`#lname`).value
+    let teamNode = document.createElement(`li`)
+    teamNode.innerHTML = newList
+    teamNode.classList.add('players')
+    document.getElementById('list').appendChild(teamNode)
+    document.getElementById('lname').value = ''
+    players.push(teamNode.innerHTML)
+    console.log(players)
+    
+}
+
+
+
+
+
+function createTeams() {
+     let newTeam = document.getElementById('teamid').value
+     let newTeamNode = parseInt(newTeam)
+
+     for (let i = 0; i < newTeam.length; i++) {
+         let team = document.createElement('div')
+         team.classList.add('team')
+         document.getElementById('teamrow').appendChild(team)
+         document.getElementById('teamid').value = ''
+         team.innerHTML = 'Team' + i
+         
+     }
+
+    
 }
 
 
@@ -69,15 +59,12 @@ function addPlayers(){
 
 
 
-// function addToTeam(){
-//     let newList = document.querySelector(`#lname`)
-//        let newTeam = document.createElement(`li`)
-//        document.getElementById(`col-4`)[0].appendChild(newTeam)
-//        newTeam.innerHTML = newList.value
-// }
 
 
-// window.onload = () => {
-    
 
-// }
+
+
+
+
+
+

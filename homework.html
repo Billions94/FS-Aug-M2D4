@@ -35,28 +35,69 @@
     <style>
       
        body {
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(195,25,195,1) 0%, rgba(0,212,255,1) 100%);
+        background-color: bisque;
        }
 
     </style>
 
   </head>
   <body>
-    
-    <div>
-            <label for="lname">Create your Team</label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
-            <input type="submit" value="Submit" onclick="addPlayers()">       
+    <h1 class="text-center">Team Generator</h1>
+
+   <div class="container">
+       <div class="row">
+           <div class="col-6">
+            <div>
+                <label for="lname">Add your player</label><br>
+                <input type="text" id="lname" name="lname" value="" placeholder="insert player name">
+                <input type="submit" value="Submit" class="btn btn-outline-secondary" onclick="addPlayers()"> 
+                <br>
+                <label for="lname">Create Teams</label><br>
+                <input type="text" id="teamid" name="lname" value="" placeholder="generate teams">
+                <input type="submit" value="Submit" class="btn btn-outline-secondary" onclick="createTeams()">       
+        </div>
+           </div>
+       </div>
+   </div>
+
+    <hr>
+
+    <!----- Waiting List -----> 
+
+    <div class="container" position="relative" id=>
+        <div class="row">
+
+            <div class="col-9">
+                <h4>Waiting List</h4>
+                <ul class='list-group' id='list'>
+                    <li>Names</li></ul>
+                </div>
+                
+            <div class="col-3 ">
+                <button class="btn btn-outline-secondary" type="button" id="assign" >Assign random to team</button>
+            </div>
+
+        </div>
     </div>
 
+    <hr>
 
+    <!---  Team Container  --->
     <div class="container">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-3"></div>
-            <div class="col-5"></div>
+        <div class="row" id="teamrow">
+            <div class="col teams">
+                <h4>Teams</h4>
+
+            </div>
         </div>
+    </div>
+
+    <hr>
+
+    <div>
+        <button onClick="window.location.reload();" class="btn btn-outline-secondary"
+            style="vertical-align: middle;">Reset
+            app</button>
     </div>
 
 
