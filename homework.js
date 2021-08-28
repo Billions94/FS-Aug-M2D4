@@ -54,7 +54,11 @@ function createTeams() {
 
 // Assign random person to a list
 function assignRandom(){
-    
+    let random = document.querySelectorAll('.players')
+
+    for (let i = 0; i < random.length; i++){
+        
+    }
 }
 
 
