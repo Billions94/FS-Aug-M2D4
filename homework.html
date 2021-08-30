@@ -39,6 +39,7 @@
        }
 
     </style>
+    <title>Team Gen</title>
 
   </head>
   <body>
@@ -53,7 +54,7 @@
                 <input type="submit" value="Submit" class="btn btn-outline-secondary text-light" onclick="addPlayers()"> 
                 <br>
                 <label for="lname">Create Teams</label><br>
-                <input type="text" id="teamid" name="lname" value="" placeholder="generate teams">
+                <input type="number" id="teamid" name="lname" value="" placeholder="generate teams">
                 <input type="submit" value="Submit" class="btn btn-outline-secondary text-light" onclick="createTeams()">       
         </div>
            </div>
@@ -67,14 +68,14 @@
     <div class="container" position="relative" id=>
         <div class="row">
 
-            <div class="col-9">
+            <div class="col-9" >
                 <h4>Waiting List</h4>
                 <ul class='list-group' id='list'>
                     </ul>
                 </div>
                 
             <div class="col-3 ">
-                <button class="btn btn-outline-secondary text-white" type="button" id="assign" >Assign random to team</button>
+                <button class="btn btn-outline-secondary text-white" onclick="assignRandom()" type="button" id="assign" >Assign random to team</button>
             </div>
 
         </div>

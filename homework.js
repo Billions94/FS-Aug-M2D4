@@ -12,66 +12,43 @@
 // - [EXTRA] Create a button to remove a user from a team, and putting him back in the main list, waiting to be reassigned.
 // - [EXTRA] Create a button to reset the state of the app.
 
-
-
-
-
 // Add names to waiting list
-let players = []
+let players = [];
 
-
-function addPlayers(){
-    let newList = document.querySelector(`#lname`).value
-    let teamNode = document.createElement(`div`)
-    teamNode.innerHTML = newList
-    teamNode.classList.add('players')
-    document.getElementById('list').appendChild(teamNode)
-    document.getElementById('lname').value = ''
-    players.push(teamNode.innerHTML)
-    console.log(players)
-    
+function addPlayers() {
+  let newList = document.querySelector(`#lname`).value;
+  let teamNode = document.createElement(`div`);
+  teamNode.innerHTML = newList;
+  teamNode.classList.add("players");
+  document.getElementById("list").appendChild(teamNode);
+  document.getElementById("lname").value = "";
+  players.push(teamNode.innerHTML);
+  console.log(players);
 }
 
-
-
-
-// Add number for teams 
+// Add number for teams
 function createTeams() {
-     let newTeam = document.getElementById('teamid').value
-    
-     for (let i = 0; i < newTeam.length; i++) {
-         let team = document.createElement('div')
-         team.classList.add('col')
-         team.classList.add('team')
-         document.getElementById('teamrow').appendChild(team)
-         document.getElementById('teamid').value = ''
-         team.innerHTML = 'Team' + [i]
-         
-     }
+  let newTeam = document.getElementById("teamid").value;
 
-    
+  for (let i = 0; i < newTeam; i++) {
+    let team = document.createElement("div");
+    team.classList.add("col");
+    team.classList.add("team");
+    document.getElementById("teamrow").appendChild(team);
+    document.getElementById("teamid").value = "";
+    team.innerHTML = "Team" + (i + 1) 
+  }
 }
 
 // Assign random person to a list
-function assignRandom(){
-    let random = document.querySelectorAll('.players')
+function assignRandom() {
+  let value = document.getElementById('list').value
 
-    for (let i = 0; i < random.length; i++){
-        
-    }
+    let team = document.getElementById('teamrow')
+    let teamNode = document.createElement('div')
+    team.innerHTML = value
+    team.appendChild(teamNode)
+    
+  
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
