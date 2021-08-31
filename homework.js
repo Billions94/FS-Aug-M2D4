@@ -23,7 +23,7 @@ function addPlayers() {
   document.getElementById("list").appendChild(teamNode);
   document.getElementById("lname").value = "";
   players.push(teamNode.innerHTML);
-  console.log(players);
+  // console.log(players);
 }
 
 // Add number for teams
@@ -44,8 +44,8 @@ function createTeams() {
 function assignRandom() {
   let value = document.getElementById('list').value
 
-    let team = document.getElementById('teamrow')
-    let teamNode = document.createElement('div')
+    let team = document.getElementById('colteams')[0]
+    let teamNode = document.createElement('li')
     team.innerHTML = value
     team.appendChild(teamNode)
     
